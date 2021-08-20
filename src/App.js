@@ -12,6 +12,7 @@ import AboutUgsrp from './pages/AboutUgsrp'
 import VisualizerMenu from './graphs/VisualizerMenu'
 import VisualizerAQ from './graphs/VisualizerAQ'
 import VisualizerNQ from './graphs/VisualizerNQ'
+import UxHci from './pages/UxHci'
 
 require('dotenv').config()
 
@@ -71,6 +72,9 @@ const App = () => {
             </Route>
             <Route path="/visualizer-nq">
               <VisualizerNQ />
+            </Route>
+            <Route path="/hci">
+              <UxHci />
             </Route>
 
             <Route path="/">

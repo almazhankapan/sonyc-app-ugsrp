@@ -18,15 +18,12 @@ function DataVisualization() {
         <h2 className="header-text">Data Visualization</h2>
         <div className="block">
           <p className="full-text">
-            <br />
-            <br />
             Sensors are used to measure air and noise pollution levels and
             visualizing the data is the first step in making decisions about the
             data.
           </p>
           <br />
         </div>
-        <br /> <br />
         <div className="block">
           <h4 className="gif-text">Data Visualization Research Review</h4>
 

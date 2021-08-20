@@ -8,12 +8,14 @@ p {
 }
 
 .text a {
-  color: rgb(163, 106, 228);
+  color: rgb(99, 142, 223);
 }
 
 .text a:hover {
-  color: #8d2de0;
+  color: #3a37f5;
 }
+
+
 
 footer {
   margin-top: 2em;
@@ -27,12 +29,14 @@ footer {
 }
 
 .footer-links {
-  color: rgb(163, 106, 228);
+  color: rgb(173,122,232);
   padding: 0 10px 0 10px;
+  text-decoration: none;
 }
 
 .footer-links:hover {
-  color: #8d2de0;
+  color: #a43cee;
+  text-decoration: none;
 }
 
 /* Position and sizing of burger button */
@@ -51,7 +55,7 @@ footer {
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #8d2de0;
+  background: #3a37f5;
 }
 
 /* Position and sizing of clickable cross button */
@@ -96,7 +100,7 @@ footer {
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: #ae8ad7;
+  color: rgb(99, 142, 223);
   margin-bottom: 10px;
   text-align: left;
   text-decoration: none;
@@ -104,7 +108,7 @@ footer {
 }
 
 .bm-item:hover {
-  color: #8d2de0;
+  color: #3a37f5;
 }
 
 /* Styling of overlay */

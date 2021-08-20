@@ -3,22 +3,20 @@ h1 {
   padding: 0;
   color: #d1cdc7;
 }
-h4 {
-  -webkit-text-stroke: 0.5px black;
-}
+
+
 .content a{
   display: inline;
 }
 
 body {
   color: #d1cdc7;
-  background-color: #2d2d2d;
+  background-color: #555555;
   margin-left: auto;
   margin-right: auto;
 }
 #team-header {
-  color: rgb(131, 50, 224);
-  -webkit-text-stroke: 1px black;
+  color: rgb(99, 142, 223);
 }
 
 .content {
@@ -54,11 +52,11 @@ body {
   font-size: 13px;
   margin-left: 15px;
   margin: 2px 0 0 0;
-  color: rgb(163, 106, 228);
+  color: rgb(99, 142, 223);
 }
 
 .content a:hover {
-  color: #8d2de0;
+  color: #3a37f5;
 }
 
 @media screen and (max-width: 2400px) {

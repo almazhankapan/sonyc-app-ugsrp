@@ -9,9 +9,7 @@ function DataCollection() {
     <>
       <Header />
       <div className="home-ugsrp">
-        <h2 className="header-text-ugsrp">
-          Sensor Data Collection and Analysis
-        </h2>
+        <h2 className="header-text">Sensor Data Collection and Analysis</h2>
         <div className="block">
           <p className="full-text">
             <br />
@@ -23,8 +21,8 @@ function DataCollection() {
             </a>
             . The AQ sensor chosen is the{' '}
             <a href="https://www.pierasystems.com/products/piera-7100-intelligent-particle-sensor">
-              Piera IPS-7100 Intelligent Particle Sensor{' '}
-            </a>
+              Piera IPS-7100 Intelligent Particle Sensor
+            </a>{' '}
             which communiactes via UART with the SONYC project's Raspberry Pi 4B
             based noise sensor.
             <br /> <br />

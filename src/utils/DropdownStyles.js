@@ -9,11 +9,11 @@ export const customStyles = {
     '&:active': {
       background: '#3cdd1b'
     },
-    color: state.isFocused ? '#666666' : '#2d2d2d'
+    color: state.isFocused ? '#666666' : '#808182'
   }),
   valueContainer: (provided) => ({
     ...provided,
-    color: '#2d2d2d'
+    color: '#808182'
   }),
   control: (provided, state) => ({
     ...provided,

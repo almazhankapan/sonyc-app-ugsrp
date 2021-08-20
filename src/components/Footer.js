@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer-container">
         <img id="trakt-logo" src={trakt} alt="Trakt Logo" />
         <Link to="https://wp.nyu.edu/sonyc/" className="footer-links">
-          SONYC Lab
+          Sounds of New York City
         </Link>
       </div>
     </footer>

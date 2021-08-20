@@ -11,7 +11,7 @@ const Hamburger = (props) => {
         About SONYC
       </Link>
       <Link to="/about-ugsrp" className="menu-item">
-        About SONYC UGSRP'21
+        Undergraduate Summer Research'21
       </Link>
       <Link to="/data-collection" className="menu-item">
         Data Collection and Analysis
@@ -22,9 +22,11 @@ const Hamburger = (props) => {
       <Link to="/visualizer" className="menu-item">
         Visualizer Interface
       </Link>
-
+      <Link to="/hci" className="menu-item">
+        UX and HCI
+      </Link>
       <Link to="/meet-the-team" id="Meet-the-team" className="menu-item">
-        Meet the Team
+        About the Team
       </Link>
     </Menu>
   )
