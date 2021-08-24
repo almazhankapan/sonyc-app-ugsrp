@@ -7,11 +7,10 @@ import MeetTheTeam from './pages/MeetTheTeam'
 import ScrollToTop from './utils/ScrollToTop'
 import DataVisualization from './pages/DataVisualization'
 import Modal from 'react-modal'
-import AllShows from './pages/AllShows'
 import AboutUgsrp from './pages/AboutUgsrp'
 import VisualizerMenu from './graphs/VisualizerMenu'
-import VisualizerAQ from './graphs/VisualizerAQ'
-import VisualizerNQ from './graphs/VisualizerNQ'
+import VisualizerAQ from './graphs/VisualizerNQ'
+import VisualizerNQ from './graphs/VisualizerAQ'
 import UxHci from './pages/UxHci'
 
 require('dotenv').config()
@@ -49,9 +48,6 @@ const App = () => {
           <Switch>
             {/* TODO: Add a way to view a list of all shows, much like my-shows but for non logged in users */}
 
-            <Route path="/all-shows">
-              <AllShows />
-            </Route>
             <Route path="/data-collection">
               <DataCollection />
             </Route>

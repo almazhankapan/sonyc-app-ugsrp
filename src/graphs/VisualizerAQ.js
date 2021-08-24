@@ -1,6 +1,6 @@
 import React from 'react'
 //Important! Below the mock data is imported from the utils folder
-import { dataAQ } from '../utils/MockDataAq.js'
+import { dataAQ } from '../utils/MockDataAq'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Histogram from './Histogram'
@@ -19,9 +19,17 @@ import { useState } from 'react'
 //Components in React can be in the form of functions, classes etc.
 //and consist of both javascript code and html code (html is the return value)
 function VisualizerAQ() {
-  const dataKeysAq = Object.keys(dataAQ[0])
+  const labelDS = 'Select a Dataset'
+  const [database, setDS] = useState('')
+  const datasetNames = ['Air Quality Dataset', 'Noise Quality Dataset']
+  let display = true
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const graphObject = { database }
+    console.log(graphObject)
+  }
+  const dataKeys = Object.keys(dataAQ[0])
   const [histoXAttr, setHistoXAttr] = useState('ID')
-
   //scatter plot attributes
   const [ScatoXAttr, setScatoXAttr] = useState('ID')
   const [ScatoYAttr, setScatoYAttr] = useState('ID')
@@ -55,14 +63,14 @@ function VisualizerAQ() {
             <Histogram
               data={dataAQ}
               xAxisAttribute={histoXAttr}
-              title={`Histogram Distribution of Air Quality data`}
+              title={`Histogram Distribution of Noise Level data`}
             ></Histogram>
 
             <div>
               <div>X Axis</div>
               <div>
                 <select onChange={(e) => setHistoXAttr(e.target.value)}>
-                  {dataKeysAq.map((key) => (
+                  {dataKeys.map((key) => (
                     <option key={key} value={key}>
                       {key}
                     </option>
@@ -78,14 +86,14 @@ function VisualizerAQ() {
               data={dataAQ}
               xAxisAttribute={ScatoXAttr}
               yAxisAttribute={ScatoYAttr}
-              title={'Scatter Plot of Air Quality Data'}
+              title={`Scatter Plot Distribution of Noise Level data`}
             ></ScatterPlot>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setScatoXAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -97,7 +105,7 @@ function VisualizerAQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setScatoYAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -114,14 +122,13 @@ function VisualizerAQ() {
               data={dataAQ}
               xAxisAttribute={boxPlotXAttr}
               yAxisAttribute={boxPlotYAttr}
-              title={'Box Plot of Air Quality Data'}
             ></BoxPlot>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setBoxPlotXAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -133,7 +140,7 @@ function VisualizerAQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setBoxPlotYAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -150,14 +157,14 @@ function VisualizerAQ() {
               data={dataAQ}
               xAxisAttribute={lineGraphXAttr}
               yAxisAttribute={lineGraphYAttr}
-              title={'Line Graph Distribution of Air Quality Data'}
+              title={`Line Graph of Noise Level data`}
             ></LineGraph>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setlineGraphXAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -169,7 +176,7 @@ function VisualizerAQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setlineGraphYAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -186,14 +193,14 @@ function VisualizerAQ() {
               data={dataAQ}
               xAxisAttribute={barChartXAttr}
               yAxisAttribute={barChartYAttr}
-              title={'Bar Chart of Air Quality Data'}
+              title={`Bar Chart of Noise Level data`}
             ></BarChart>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setBarChartXAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -205,7 +212,7 @@ function VisualizerAQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setBarChartYAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -222,14 +229,14 @@ function VisualizerAQ() {
               data={dataAQ}
               xAxisAttribute={areaChartXAttr}
               yAxisAttribute={areaChartYAttr}
-              title={'Area Chart of Air Quality Data'}
+              title={`Area Chart of Noise Level data`}
             ></AreaChart>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setAreaChartXAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -241,7 +248,7 @@ function VisualizerAQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setAreaChartYAttr(e.target.value)}>
-                    {dataKeysAq.map((key) => (
+                    {dataKeys.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>

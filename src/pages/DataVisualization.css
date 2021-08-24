@@ -7,6 +7,40 @@
   width: 90%;
   
 }
+
+hr{
+  color: #d1cdc7; 
+  
+  border: none;
+    height: 1px;
+}
+html {
+ 
+ 
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+.float-child {
+  width: 50%;
+  float: left;  
+}  
 a{
   color: rgb(99, 142, 223);
 }
@@ -53,7 +87,7 @@ a{
   .gif-text {
     font-size: 24px;
   }
-  .gif-text-h5{
+  .gif-text-h5-dv{
     font-size: 21px;
   }
 }
@@ -66,6 +100,9 @@ a{
     font-size: 22px;
   }
   .gif-text {
+    font-size: 20px;
+  }
+  .gif-text-h5-dv {
     font-size: 20px;
   }
 }
@@ -85,6 +122,9 @@ a{
       font-size: 21px;
     }
     .gif-text {
+      font-size: 19px;
+    }
+    .gif-text-h5-dv {
       font-size: 19px;
     }
   

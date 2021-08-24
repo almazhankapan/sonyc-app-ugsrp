@@ -1,6 +1,6 @@
 import React from 'react'
 //Important! Below the mock data is imported from the utils folder
-import { dataGeo } from '../utils/MockData.js'
+import { dataNQ } from '../utils/MockDataNq.js'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Histogram from './Histogram'
@@ -19,17 +19,9 @@ import { useState } from 'react'
 //Components in React can be in the form of functions, classes etc.
 //and consist of both javascript code and html code (html is the return value)
 function VisualizerNQ() {
-  const labelDS = 'Select a Dataset'
-  const [database, setDS] = useState('')
-  const datasetNames = ['Air Quality Dataset', 'Noise Quality Dataset']
-  let display = true
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const graphObject = { database }
-    console.log(graphObject)
-  }
-  const dataKeys = Object.keys(dataGeo[0])
+  const dataKeysAq = Object.keys(dataNQ[0])
   const [histoXAttr, setHistoXAttr] = useState('ID')
+
   //scatter plot attributes
   const [ScatoXAttr, setScatoXAttr] = useState('ID')
   const [ScatoYAttr, setScatoYAttr] = useState('ID')
@@ -61,16 +53,16 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>Histogram</p>
             <Histogram
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={histoXAttr}
-              title={`Histogram Distribution of Noise Level data`}
+              title={`Histogram Distribution of Air Quality data`}
             ></Histogram>
 
             <div>
               <div>X Axis</div>
               <div>
                 <select onChange={(e) => setHistoXAttr(e.target.value)}>
-                  {dataKeys.map((key) => (
+                  {dataKeysAq.map((key) => (
                     <option key={key} value={key}>
                       {key}
                     </option>
@@ -83,17 +75,17 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>Scatter Plot</p>
             <ScatterPlot
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={ScatoXAttr}
               yAxisAttribute={ScatoYAttr}
-              title={`Scatter Plot Distribution of Noise Level data`}
+              title={'Scatter Plot of Air Quality Data'}
             ></ScatterPlot>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setScatoXAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -105,7 +97,7 @@ function VisualizerNQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setScatoYAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -119,16 +111,17 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>BoxPlot</p>
             <BoxPlot
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={boxPlotXAttr}
               yAxisAttribute={boxPlotYAttr}
+              title={'Box Plot of Air Quality Data'}
             ></BoxPlot>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setBoxPlotXAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -140,7 +133,7 @@ function VisualizerNQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setBoxPlotYAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -154,17 +147,17 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>Line Graph</p>
             <LineGraph
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={lineGraphXAttr}
               yAxisAttribute={lineGraphYAttr}
-              title={`Line Graph of Noise Level data`}
+              title={'Line Graph Distribution of Air Quality Data'}
             ></LineGraph>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setlineGraphXAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -176,7 +169,7 @@ function VisualizerNQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setlineGraphYAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -190,17 +183,17 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>Bar Chart</p>
             <BarChart
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={barChartXAttr}
               yAxisAttribute={barChartYAttr}
-              title={`Bar Chart of Noise Level data`}
+              title={'Bar Chart of Air Quality Data'}
             ></BarChart>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setBarChartXAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -212,7 +205,7 @@ function VisualizerNQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setBarChartYAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -226,17 +219,17 @@ function VisualizerNQ() {
           <div className="graph-block">
             <p>Area Chart</p>
             <AreaChart
-              data={dataGeo}
+              data={dataNQ}
               xAxisAttribute={areaChartXAttr}
               yAxisAttribute={areaChartYAttr}
-              title={`Area Chart of Noise Level data`}
+              title={'Area Chart of Air Quality Data'}
             ></AreaChart>
             <div className="wrap-axis">
               <div className="x-axis">
                 <div>X Axis</div>
                 <div>
                   <select onChange={(e) => setAreaChartXAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>
@@ -248,7 +241,7 @@ function VisualizerNQ() {
                 <div>Y Axis</div>
                 <div>
                   <select onChange={(e) => setAreaChartYAttr(e.target.value)}>
-                    {dataKeys.map((key) => (
+                    {dataKeysAq.map((key) => (
                       <option key={key} value={key}>
                         {key}
                       </option>

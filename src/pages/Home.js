@@ -14,7 +14,7 @@ function Home() {
           <p className="full-text">
             <br />
             <br />
-            The Sounds of the New York City (SONYC) project lanuched by
+            The Sounds of the New York City (SONYC) project launched by
             researchers from NYU and Ohio State University is a
             first-of-its-kind comprehensive research initiative to understand
             and address noise pollution in New York and beyond. The SONYC
