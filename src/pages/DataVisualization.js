@@ -677,6 +677,7 @@ function DataVisualization() {
           <br />
           <br />
           <br />
+          <br />
           <LazyImageProvider>
             <Carousel>
               {images.map((image, i) => (
@@ -725,6 +726,7 @@ function DataVisualization() {
           <br />
           <br />
           <br />
+          <br />
           <LazyImageProvider>
             <Carousel>
               {imagesRc.map((image, i) => (
@@ -765,6 +767,8 @@ function DataVisualization() {
               </p>
             </div>
           </div>
+          <br />
+          <br />
           <br />
           <br />
           <LazyImageProvider>
