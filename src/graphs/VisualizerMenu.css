@@ -80,13 +80,18 @@
   margin-bottom: 50%;
   
 }
+
+.svg-container{
+width: 1000px
+}
 .wrap-img1{
-  margin-left: 8%;
-  margin-right: 8%;
-  width: 30% 
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  float: left; 
 }
 .menu-img{
-  width: 30% 
+  width: 100% 
 }
 
 .wrap-img2{

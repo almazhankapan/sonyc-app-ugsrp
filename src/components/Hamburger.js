@@ -26,7 +26,7 @@ const Hamburger = (props) => {
         UX and HCI
       </Link>
       <Link to="/meet-the-team" id="Meet-the-team" className="menu-item">
-        People
+        Meet the Team
       </Link>
     </Menu>
   )

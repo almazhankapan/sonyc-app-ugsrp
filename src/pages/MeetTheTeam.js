@@ -17,8 +17,9 @@ function MeetTheTeam() {
             This web app displays outputs of the summer research work conducted
             by James, Matahari, Alma under supervision of Professor Dove and
             Professor Mydlarz. The web app is built by Alma using ReactJS,
-            NodeJS, Plotly. Some texts and images are provided by the official
-            SONYC website, supervisors and student researchers.
+            NodeJS, Plotly. <br />
+            Some texts and images are provided by the official SONYC website,
+            supervisors and student researchers.
           </p>
         </div>
         <div className="content">
@@ -59,9 +60,9 @@ function MeetTheTeam() {
           <a href="https://github.com/JVenditto">GitHub</a>
           <p>
             James Venditto is an Electrical Engineering student at University of
-            Notre Dame on collecting and analyzing the Air Quality sensor data
-            that power the visualizations. Learn more about the data collection
-            and analysis process{' '}
+            Notre Dame who worked on collecting and analyzing the Air Quality
+            sensor data that power the visualization interface. Learn more about
+            the data collection and analysis process{' '}
             <a href="https://github.com/sonyc-project/sonycAQ">here</a>.
           </p>
         </div>
@@ -75,9 +76,10 @@ function MeetTheTeam() {
           <p>
             Alma Kapan is a student at New York University, an UGSRP Summer 2021
             participant, who worked on data visualization research and created
-            the SONYC Visualizer App. You can learn more about data
-            visualization research <a href="/datavis">here</a> and view project
-            code <a href="https://github.com/almazhankapan/sonyc-app">here</a>.
+            interface to visualize the AQ and noise level data. You can learn
+            more about data visualization research <a href="/datavis">here</a>{' '}
+            and view project code{' '}
+            <a href="https://github.com/almazhankapan/sonyc-app">here</a>.
           </p>
         </div>
         <div className="content">
@@ -91,9 +93,8 @@ function MeetTheTeam() {
             Matahari is a student at New York University and an UGSRP 2021
             participant who was actively involved in creating the prototype for
             the Air Quality addendum for the SONYC mobile app (ongoing work).
-            You can view app interactions
+            You can view app interactions{' '}
             <a href="https://www.figma.com/proto/onDa0SkRvfSmo6SJG7Uek5/SONYC_AQ?page-id=94%3A138&node-id=94%3A141&viewport=469%2C406%2C0.8509852290153503&scaling=min-zoom">
-              {' '}
               here
             </a>
           </p>

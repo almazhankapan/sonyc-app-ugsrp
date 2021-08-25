@@ -29,13 +29,21 @@ function VisualizerMenu() {
         </div>
         <br /> <br />
         <div className="block">
-          <Link to="/visualizer-aq" className="wrap-img1">
-            <img className="menu-img" src={aqImg} alt="diagram gif" />
-          </Link>
-          <Link to="/visualizer-nq" className="wrap-img1">
-            <img className="menu-img" src={nqImg} alt="diagram gif" />
-          </Link>
+          <div className="wrap-img1">
+            <Link to="/visualizer-aq">
+              <p className="full-text">Visualize Air Quality Data</p>
+              <img className="menu-img" src={aqImg} alt="diagram gif" />
+            </Link>
+          </div>
+          <div className="wrap-img1">
+            <Link to="/visualizer-nq">
+              <p className="full-text">Visualize Noise Level Data</p>
+
+              <img className="menu-img" src={nqImg} alt="diagram gif" />
+            </Link>
+          </div>
         </div>
+        <div className="clear"></div>
         <br /> <br />
         <br /> <br />
         <br />
