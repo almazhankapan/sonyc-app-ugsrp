@@ -8,9 +8,9 @@ import ScrollToTop from './utils/ScrollToTop'
 import DataVisualization from './pages/DataVisualization'
 import Modal from 'react-modal'
 import AboutUgsrp from './pages/AboutUgsrp'
-import VisualizerMenu from './graphs/VisualizerMenu'
-import VisualizerAQ from './graphs/VisualizerAQ'
-import VisualizerNQ from './graphs/VisualizerNQ'
+import VisualizerMenu from './visualizer/VisualizerMenu'
+import VisualizerAQ from './visualizer/VisualizerAQ'
+import VisualizerNQ from './visualizer/VisualizerNQ'
 import UxHci from './pages/UxHci'
 
 require('dotenv').config()
