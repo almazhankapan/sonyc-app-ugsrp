@@ -4,13 +4,13 @@ import Footer from '../components/Footer'
 import lit1 from '../images/lit1.png'
 import lit2 from '../images/lit2.png'
 import lit3 from '../images/lit3.png'
-import bch1 from '../images/bch1.png'
-import bch2 from '../images/bch2.png'
-import bch3 from '../images/bch3.png'
 import lit4 from '../images/lit4.png'
 import lit5 from '../images/lit5.png'
 import lit1a from '../images/lit1a.png'
 import lit2a from '../images/lit2a.png'
+import bch1 from '../images/bch1.png'
+import bch2 from '../images/bch2.png'
+import bch3 from '../images/bch3.png'
 import lc1 from '../images/lc1.png'
 import lc2 from '../images/lc2.png'
 import lc3 from '../images/lc3.png'
@@ -21,6 +21,10 @@ import rc1 from '../images/rc1.png'
 import rc2 from '../images/rc2.png'
 import rc3 from '../images/rc3.png'
 import rc4 from '../images/rc4.png'
+import wa1 from '../images/wa1.png'
+import wa2 from '../images/wa2.png'
+import wa3 from '../images/wa3.png'
+import wa4 from '../images/wa4.png'
 import bc1 from '../images/bc1.png'
 import bc2 from '../images/bc2.png'
 import bc3 from '../images/bc3.png'
@@ -39,6 +43,7 @@ function DataVisualization() {
   const imagesNg = [ng1, ng2, ng3]
   const imagesBg = [bc1, bc2, bc3]
   const imagesBcg = [bch1, bch2, bch3]
+  const imagesWa = [wa1, wa2, wa3, wa4]
 
   return (
     <>
@@ -625,6 +630,13 @@ function DataVisualization() {
         <br /> <br />
         <div className="block">
           <h4 className="gif-text">Visualization Graphs and Discussion </h4>
+          <p className="full-text">
+            We researched and selected graphs that can most effectively
+            visualize the longitudinal sensor data (both Air Quality and Noise
+            level data). Some of these graphs have been already created and
+            incorporated in the Visualizer interface, while other graphs can
+            serve as an inspiration for future researchers at the SONYC lab.
+          </p>
           <h5 className="gif-text-h5-dv">A. Line graph</h5>
           <p className="full-text">
             {' '}
@@ -662,7 +674,10 @@ function DataVisualization() {
               </p>
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <LazyImageProvider>
             <Carousel>
               {images.map((image, i) => (
@@ -707,7 +722,10 @@ function DataVisualization() {
             </div>
           </div>
           <br />
-
+          <br />
+          <br />
+          <br />
+          <br />
           <LazyImageProvider>
             <Carousel>
               {imagesRc.map((image, i) => (
@@ -748,6 +766,7 @@ function DataVisualization() {
               </p>
             </div>
           </div>
+          <br />
           <br />
           <LazyImageProvider>
             <Carousel>
@@ -845,6 +864,8 @@ function DataVisualization() {
             </div>
           </div>
           <br />
+          <br />
+          <br />
           <LazyImageProvider>
             <Carousel>
               {imagesBcg.map((image, i) => (
@@ -853,7 +874,36 @@ function DataVisualization() {
             </Carousel>
           </LazyImageProvider>
         </div>
-        <br />
+        <div className="block">
+          <h4 className="gif-text">Web Accessibility Notes</h4>
+          <p className="full-text">
+            Another part of the Data Visualization Research involved researching
+            Web Accessibility guidelines for web-based visualizations. This step
+            is required for ensuring that current and future visualizations
+            consider a diverse range of visual, physical and other abilities.
+            <br />
+            <br />
+            According to the World Wide Web Consortium, accessibility is
+            essential for developers and organizations that want to create
+            high-quality websites and web tools, and not exclude people from
+            using their products and services.
+            <br />
+            Below you can view a set of slides that include common advice on how
+            to make web visualizations more accessible and accompanying visual
+            examples. These slides are based on the{' '}
+            <a href="https://www.betterment.com/resources/accessible-data-visualization/">
+              Comprehensive Guide to Accessible Data Visualization
+            </a>{' '}
+            that reference the World Wide Web Consortium guidelines.
+          </p>
+          <LazyImageProvider>
+            <Carousel>
+              {imagesWa.map((image, i) => (
+                <LazyImage aspectRatio={[10, 7]} src={image} key={i} />
+              ))}
+            </Carousel>
+          </LazyImageProvider>
+        </div>
       </div>
       <Footer />
     </>
