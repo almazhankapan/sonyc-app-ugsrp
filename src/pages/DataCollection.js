@@ -79,8 +79,8 @@ function DataCollection() {
               />
               <br />
               <figlabel>
-                Figure 2 (above). Health effects from current PM2.5. Image
-                courtesy of the NYC Department of Health and Mental Hygiene.
+                Figure 2. Health effects from current PM2.5. Image courtesy of
+                the NYC Department of Health and Mental Hygiene.
               </figlabel>
             </figure>
             <br />
@@ -95,9 +95,9 @@ function DataCollection() {
               />
               <br />
               <figlabel>
-                Figure 3 (above). Visualization of PM2.5 attributable
-                respiratory hospitalization rate. Image courtesy of the NYC
-                Department of Health and Mental Hygiene.
+                Figure 3. Visualization of PM2.5 attributable respiratory
+                hospitalization rate. Image courtesy of the NYC Department of
+                Health and Mental Hygiene.
               </figlabel>
             </figure>
             <br />
