@@ -1,8 +1,7 @@
 import React from 'react'
 import Plot from 'react-plotly.js'
-import { dataNonGeo } from '../utils/MockData'
 
-const BarChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
+const BarChart = ({ data, xAxisAttribute, yAxisAttribute, title }) => {
   let xData = data.map((d) => {
     if (d[xAxisAttribute] === undefined || d[xAxisAttribute] === 'NULL') {
       return ''
@@ -22,13 +21,13 @@ const BarChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
     y: yData,
     marker: {
       size: 12,
-      color: 'rgba(190, 53, 110, 0.5)'
+      color: 'rgba(190, 53, 110, 0.5)',
     },
     type: 'bar',
     hovertemplate:
       '<b>Noise Value</b>: %{y}' +
       '<br><b>Day</b>: %{x}<br>' +
-      '<extra></extra>'
+      '<extra></extra>',
   }
   //accessibility
   var data = [datapoints]
@@ -36,8 +35,8 @@ const BarChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
   let layout = {
     xaxis: { showgrid: false },
     yaxis: { showgrid: false },
-    title: 'Scatter Plot of Noise Level data',
-    hoverlabel: { bgcolor: '#FFF' }
+    title: title,
+    hoverlabel: { bgcolor: '#FFF' },
   }
 
   return (

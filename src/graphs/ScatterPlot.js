@@ -1,8 +1,7 @@
 import React from 'react'
 import Plot from 'react-plotly.js'
-import { dataNonGeo } from '../utils/MockData'
 
-const ScatterPlot = ({ data, xAxisAttribute, yAxisAttribute }) => {
+const ScatterPlot = ({ data, xAxisAttribute, yAxisAttribute, title }) => {
   let xData = data.map((d) => {
     if (d[xAxisAttribute] === undefined || d[xAxisAttribute] === 'NULL') {
       return ''
@@ -25,34 +24,34 @@ const ScatterPlot = ({ data, xAxisAttribute, yAxisAttribute }) => {
     type: 'scatter',
     marker: {
       size: 12,
-      color: 'rgba(190, 53, 110, 0.5)'
+      color: 'rgba(190, 53, 110, 0.5)',
     },
     hovertemplate:
       '<b>Noise Value</b>: %{y}' +
       '<br><b>Day</b>: %{x}<br>' +
-      '<extra></extra>'
+      '<extra></extra>',
   }
   //accessibility
   var data = [datapoints]
 
   let layout = {
     margin: {
-      pad: 5
+      pad: 5,
     },
     transition: {
       duration: 500,
-      easing: 'cubic'
+      easing: 'cubic',
     },
     frame: {
-      duration: 500
+      duration: 500,
     },
     xaxis: { showgrid: false },
     yaxis: { showgrid: false },
     line: {
-      width: 0
+      width: 0,
     },
-    title: 'Scatter Plot of Noise Level data',
-    hoverlabel: { bgcolor: '#FFF' }
+    title: title,
+    hoverlabel: { bgcolor: '#FFF' },
   }
 
   return (

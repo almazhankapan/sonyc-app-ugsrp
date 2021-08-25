@@ -2,7 +2,7 @@ import React from 'react'
 import Plot from 'react-plotly.js'
 import { dataNonGeo } from '../utils/MockData'
 
-const LineGraph = ({ data, xAxisAttribute, yAxisAttribute }) => {
+const LineGraph = ({ data, xAxisAttribute, yAxisAttribute, title }) => {
   let xData = data.map((d) => {
     if (d[xAxisAttribute] === undefined || d[xAxisAttribute] === 'NULL') {
       return ''
@@ -24,35 +24,35 @@ const LineGraph = ({ data, xAxisAttribute, yAxisAttribute }) => {
     text: [],
     marker: {
       size: 12,
-      color: 'rgb(56, 176, 88)'
+      color: 'rgb(56, 176, 88)',
     },
     type: 'scatter',
     hovertemplate:
       '<b>Noise Value</b>: %{y}' +
       '<br><b>Day</b>: %{x}<br>' +
-      '<extra></extra>'
+      '<extra></extra>',
   }
   //accessibility
   var data = [datapoints]
 
   let layout = {
     margin: {
-      pad: 5
+      pad: 5,
     },
     transition: {
       duration: 500,
-      easing: 'cubic'
+      easing: 'cubic',
     },
     frame: {
-      duration: 500
+      duration: 500,
     },
     xaxis: { showgrid: false },
     yaxis: { showgrid: false },
     line: {
-      width: 0
+      width: 0,
     },
-    title: 'Line Graph of Noise Level data',
-    hoverlabel: { bgcolor: '#FFF' }
+    title: title,
+    hoverlabel: { bgcolor: '#FFF' },
   }
 
   return (

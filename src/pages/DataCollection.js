@@ -152,7 +152,7 @@ function DataCollection() {
 
           <p className="full-text">
             <code>
-              PC0.1,###,PC0.3,###,PC0.5,###,PC1.0,###,PC2.5,###,PC5.0,###,PC10,###,PM0.1,
+              PC0.1,###,PC0.3,###,PC0.5,###,PC1.0,###,PC2.5,###,PC5.0,###,'PC10.0',###,PM0.1,
               #.####,PM0.3, #.####,PM0.5, #.####,PM1.0, #.####,PM2.5,
               #.####,PM5.0, #.####,PM10, #.####,IPS-S-#########,abcdefg######=
             </code>
@@ -167,12 +167,12 @@ function DataCollection() {
             first line in each file is a header, and all subsequent lines
             represent one of the measurements, with the first column as the
             timestamp (in seconds since the beginning of the epoch), and the
-            subsequent columns representing PC0.1 - PC10, and PM0.1 - PM10.
+            subsequent columns representing PC0.1 - 'PC10.0', and PM0.1 - PM10.
           </p>
           <h5 className="gif-text-h5">CSV File Header</h5>
           <p className="full-text">
             <code>
-              datetime,PC0.1,PC0.3,PC0.5,PC1.0,PC2.5,PC5.0,PC10,PM0.1,PM0.3,PM0.5,PM1.0,PM2.5,PM5.0,PM10
+              Time,PC0.1,PC0.3,PC0.5,PC1.0,PC2.5,PC5.0,'PC10.0',PM0.1,PM0.3,PM0.5,PM1.0,PM2.5,PM5.0,PM10
             </code>
           </p>
           <br />

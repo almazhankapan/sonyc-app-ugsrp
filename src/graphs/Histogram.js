@@ -5,15 +5,6 @@ const Histogram = ({ data, xAxisAttribute, title }) => {
   console.log(data)
   let layout = {
     autosize: true,
-    // width: 500,
-    // height: 500,
-    // margin: {
-    //   l: 50,
-    //   r: 50,
-    //   b: 100,
-    //   t: 100,
-    //   pad: 6,
-    // },
     title: title || 'Untitled',
     xaxis: { title: xAxisAttribute },
     yaxis: { title: 'Count' },
@@ -36,9 +27,9 @@ const Histogram = ({ data, xAxisAttribute, title }) => {
           x: xData,
           type: 'histogram',
           marker: {
-            color: 'rgba(67, 174, 41, 0.7)',
+            color: 'rgba(210, 106, 89, 0.7)',
             line: {
-              color: 'rgba(255, 100, 102, 1)',
+              color: 'rgba(225, 50, 102, 1)',
               width: 1,
             },
           },

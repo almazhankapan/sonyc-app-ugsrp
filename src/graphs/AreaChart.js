@@ -1,8 +1,7 @@
 import React from 'react'
 import Plot from 'react-plotly.js'
-import { dataNonGeo } from '../utils/MockData'
 
-const AreaChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
+const AreaChart = ({ data, xAxisAttribute, yAxisAttribute, title }) => {
   let xData = data.map((d) => {
     if (d[xAxisAttribute] === undefined || d[xAxisAttribute] === 'NULL') {
       return ''
@@ -22,7 +21,7 @@ const AreaChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
     y: yData,
     marker: {
       size: 12,
-      color: 'rgb(45, 70, 207)'
+      color: 'rgb(45, 70, 207)',
     },
     fill: 'tozeroy',
     type: 'scatter',
@@ -30,7 +29,7 @@ const AreaChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
     hovertemplate:
       '<b>Noise Value</b>: %{y}' +
       '<br><b>Day</b>: %{x}<br>' +
-      '<extra></extra>'
+      '<extra></extra>',
   }
 
   var datapoints2 = {
@@ -38,7 +37,7 @@ const AreaChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
     y: yData,
     marker: {
       size: 12,
-      color: 'rgb(222, 213, 115)'
+      color: 'rgb(222, 213, 115)',
     },
     fill: 'tonexty',
 
@@ -46,29 +45,29 @@ const AreaChart = ({ data, xAxisAttribute, yAxisAttribute }) => {
     hovertemplate:
       '<b>Noise Value</b>: %{y}' +
       '<br><b>Day</b>: %{x}<br>' +
-      '<extra></extra>'
+      '<extra></extra>',
   }
   //accessibility
   var data = [datapoints1, datapoints2]
 
   let layout = {
     margin: {
-      pad: 5
+      pad: 5,
     },
     transition: {
       duration: 500,
-      easing: 'cubic'
+      easing: 'cubic',
     },
     frame: {
-      duration: 500
+      duration: 500,
     },
     xaxis: { showgrid: true },
     yaxis: { showgrid: true },
     line: {
-      width: 0
+      width: 0,
     },
-    title: 'Scatter Plot of Noise Level data',
-    hoverlabel: { bgcolor: '#FFF' }
+    title: title,
+    hoverlabel: { bgcolor: '#FFF' },
   }
 
   return (

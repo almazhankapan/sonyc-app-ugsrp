@@ -1,14 +1,12 @@
 import React from 'react'
 //Important! Below the mock data is imported from the utils folder
-import { dataAQ } from '../utils/MockDataAq'
+import { dataAQ } from '../utils/DataAq'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Histogram from './Histogram'
 import BarChart from './BarChart'
 import BoxPlot from './BoxPlot'
-import Correlation from './Correlation'
 import AreaChart from './AreaChart'
-import HeatMap from './HeatMap'
 import LineGraph from './LineGraph'
 import ScatterPlot from './ScatterPlot'
 import './Visualizer.css'
@@ -19,15 +17,6 @@ import { useState } from 'react'
 //Components in React can be in the form of functions, classes etc.
 //and consist of both javascript code and html code (html is the return value)
 function VisualizerAQ() {
-  const labelDS = 'Select a Dataset'
-  const [database, setDS] = useState('')
-  const datasetNames = ['Air Quality Dataset', 'Noise Quality Dataset']
-  let display = true
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const graphObject = { database }
-    console.log(graphObject)
-  }
   const dataKeys = Object.keys(dataAQ[0])
   const [histoXAttr, setHistoXAttr] = useState('ID')
   //scatter plot attributes
@@ -58,16 +47,17 @@ function VisualizerAQ() {
         <h2 className="header-text-graphs">SONYC Visualizer App</h2>
 
         <div className="graph-wrapper">
-          <div className="graph-block">
-            <p>Histogram</p>
+          <div className="graph-block-nq">
             <Histogram
               data={dataAQ}
               xAxisAttribute={histoXAttr}
-              title={`Histogram Distribution of Noise Level data`}
+              title={`Histogram Distribution of Air Quality data`}
             ></Histogram>
 
             <div>
-              <div>X Axis</div>
+              <br />
+              <div>Select variable for the X-axis: </div>
+              <br />
               <div>
                 <select onChange={(e) => setHistoXAttr(e.target.value)}>
                   {dataKeys.map((key) => (
@@ -80,17 +70,18 @@ function VisualizerAQ() {
             </div>
           </div>
 
-          <div className="graph-block">
-            <p>Scatter Plot</p>
+          <div className="graph-block-nq">
             <ScatterPlot
               data={dataAQ}
               xAxisAttribute={ScatoXAttr}
               yAxisAttribute={ScatoYAttr}
-              title={`Scatter Plot Distribution of Noise Level data`}
+              title={`Scatter Plot Distribution of Air Quality data`}
             ></ScatterPlot>
             <div className="wrap-axis">
               <div className="x-axis">
-                <div>X Axis</div>
+                <br />
+                <div>Select variable for the X-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setScatoXAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -102,7 +93,9 @@ function VisualizerAQ() {
                 </div>
               </div>
               <div className="y-axis">
-                <div>Y Axis</div>
+                <br />
+                <div>Select variable for the Y-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setScatoYAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -116,16 +109,18 @@ function VisualizerAQ() {
             </div>
           </div>
 
-          <div className="graph-block">
-            <p>BoxPlot</p>
+          <div className="graph-block-nq">
             <BoxPlot
               data={dataAQ}
               xAxisAttribute={boxPlotXAttr}
               yAxisAttribute={boxPlotYAttr}
+              title={'Box Plot Distribution of Air Quality data'}
             ></BoxPlot>
             <div className="wrap-axis">
               <div className="x-axis">
-                <div>X Axis</div>
+                <br />
+                <div>Select variable for the X-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setBoxPlotXAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -137,7 +132,9 @@ function VisualizerAQ() {
                 </div>
               </div>
               <div className="y-axis">
-                <div>Y Axis</div>
+                <br />
+                <div>Select variable for the Y-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setBoxPlotYAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -151,17 +148,18 @@ function VisualizerAQ() {
             </div>
           </div>
 
-          <div className="graph-block">
-            <p>Line Graph</p>
+          <div className="graph-block-nq">
             <LineGraph
               data={dataAQ}
               xAxisAttribute={lineGraphXAttr}
               yAxisAttribute={lineGraphYAttr}
-              title={`Line Graph of Noise Level data`}
+              title={`Line Graph of Air Quality data`}
             ></LineGraph>
             <div className="wrap-axis">
               <div className="x-axis">
-                <div>X Axis</div>
+                <br />
+                <div>Select variable for the X-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setlineGraphXAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -173,7 +171,9 @@ function VisualizerAQ() {
                 </div>
               </div>
               <div className="y-axis">
-                <div>Y Axis</div>
+                <br />
+                <div>Select variable for the Y-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setlineGraphYAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -187,17 +187,18 @@ function VisualizerAQ() {
             </div>
           </div>
 
-          <div className="graph-block">
-            <p>Bar Chart</p>
+          <div className="graph-block-nq">
             <BarChart
               data={dataAQ}
               xAxisAttribute={barChartXAttr}
               yAxisAttribute={barChartYAttr}
-              title={`Bar Chart of Noise Level data`}
+              title={`Bar Chart of Air Quality data`}
             ></BarChart>
             <div className="wrap-axis">
               <div className="x-axis">
-                <div>X Axis</div>
+                <br />
+                <div>Select variable for the X-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setBarChartXAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -209,7 +210,9 @@ function VisualizerAQ() {
                 </div>
               </div>
               <div className="y-axis">
-                <div>Y Axis</div>
+                <br />
+                <div>Select variable for the Y-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setBarChartYAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -223,17 +226,18 @@ function VisualizerAQ() {
             </div>
           </div>
 
-          <div className="graph-block">
-            <p>Area Chart</p>
+          <div className="graph-block-nq">
             <AreaChart
               data={dataAQ}
               xAxisAttribute={areaChartXAttr}
               yAxisAttribute={areaChartYAttr}
-              title={`Area Chart of Noise Level data`}
+              title={`Area Chart of Air Quality data`}
             ></AreaChart>
             <div className="wrap-axis">
               <div className="x-axis">
-                <div>X Axis</div>
+                <br />
+                <div>Select variable for the X-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setAreaChartXAttr(e.target.value)}>
                     {dataKeys.map((key) => (
@@ -245,7 +249,9 @@ function VisualizerAQ() {
                 </div>
               </div>
               <div className="y-axis">
-                <div>Y Axis</div>
+                <br />
+                <div>Select variable for the Y-axis: </div>
+                <br />
                 <div>
                   <select onChange={(e) => setAreaChartYAttr(e.target.value)}>
                     {dataKeys.map((key) => (
