@@ -22,8 +22,7 @@ function VisualizerMenu() {
             The app has been created based on evaluation of the existing Sensor
             Data Visualization research methods and tools.
             <br />
-            Please select the dataset you would like to visualize: Air Quality
-            Data or Noise Quality Data:
+            Please select the dataset you would like to visualize:
           </p>
           <br />
         </div>
