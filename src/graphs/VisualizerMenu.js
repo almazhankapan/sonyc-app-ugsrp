@@ -30,10 +30,10 @@ function VisualizerMenu() {
         <br /> <br />
         <div className="block">
           <Link to="/visualizer-aq" className="wrap-img1">
-            <img src={aqImg} alt="diagram gif" />
+            <img className="menu-img" src={aqImg} alt="diagram gif" />
           </Link>
           <Link to="/visualizer-nq" className="wrap-img1">
-            <img src={nqImg} alt="diagram gif" />
+            <img className="menu-img" src={nqImg} alt="diagram gif" />
           </Link>
         </div>
         <br /> <br />
