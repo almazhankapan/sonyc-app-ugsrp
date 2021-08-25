@@ -11,13 +11,13 @@ a{
   color: rgb(99, 142, 223);
 }
 .gif-img {
-  width: 50%;
+  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .sensor-img {
-  width: 40%;
+  width: 30%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -38,7 +38,7 @@ a{
 }
 
 .block {
-  width: 90%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }

@@ -1,8 +1,19 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import poster from '../images/poster.png'
-import granular from '../images/granular.png'
+import hamburger from '../images/wireframes/Hamburger.png'
+import home from '../images/wireframes/Home.png'
+import map from '../images/wireframes/Map.png'
+import log from '../images/wireframes/X2.png'
+import aqGood from '../images/wireframes/X14.png'
+import logFull1 from '../images/wireframes/X15.png'
+import logFull2 from '../images/wireframes/X16.png'
+import whatAQ from '../images/wireframes/X20.png'
+import moreAQ from '../images/wireframes/X22.png'
+import cig from '../images/wireframes/X23.png'
+import impAQ from '../images/wireframes/X24.png'
+
+import x2 from '../images/wireframes/X2.png'
 
 import './UxHci.css'
 
@@ -12,55 +23,122 @@ function UxHci() {
       <Header />
       <div className="home-ugsrp">
         <h2 className="header-text-ugsrp">
-          About SONYC Undergraduate Summer Research 2021
+          UX Design and Human-Computer-Interaction additions for the Sonyc app.
         </h2>
-        <div className="block">
+        <div className="hci-block">
           <p className="full-text">
             <br />
             <br />
-            Each summer, members of the Tandon School of Engineering faculty
-            open up their labs to allow NYU Tandon, NYU Dual Degree Program in
-            Engineering (CAS/Tandon), NYU Abu Dhabi, NYU Shanghai, and select
-            non-NYU rising sophomore, junior, and senior undergraduate students
-            to complete 10 weeks of hands-on research. <br />
-            Students work in the labs with their faculty mentors and other
-            mentors on various research topics while also participating in
-            seminars presented by distinguished administrative and academic
-            personnel. In addition, research presentations and poster sessions
-            are held in which students have the opportunity to present their
-            research to peoples of all disciplines and backgrounds.
+            The SONYC project is accompanied by a mobile app that allows users
+            to monitor the Air Quality information. <br />
+            <br />
+            <br />
+            <br />
+            <div className="float-container-hci">
+              <div className="float-child">
+                <p id="cig-p" className="full-text">
+                  In the mobile app, in order to communicate the results of the
+                  SONYC research so that non-scientific users can more easily
+                  understand how the data collected affects them, we used
+                  metaphors like presenting PM2.5 information collected as
+                  “cigarettes smoked”.
+                </p>
+                <p id="cig-p" className="full-text">
+                  A rule of thumb is that one cigarette per day is the rough
+                  equivalent of a PM2.5 level of 22 μg/m3.
+                </p>
+                <p id="cig-p" className="full-text">
+                  The figure to the right shows how the 'cigarettes smoked'
+                  metaphor helps to convey information about PM2.5
+                </p>
+              </div>
+              <div className="float-child">
+                <img src={cig} alt="poster gif" className="hci-img" />
+              </div>
+            </div>
+            <div className="clear"></div>
+            <br />
+            <b>
+              The mobile app interface includes the following features:
+            </b>{' '}
+            <br />
+            <br />- Users are able to see PM2.5 levels in their area within a
+            24-hour period with a line that shows the acceptable limits set by
+            EPA. <br />
+            <br />
+            - Recommendations provide users action items on what to do when the
+            air in their area gets worse. <br />
+            <br />
+            - Users will get notifications to log the current air quality
+            conditions in their area into a journal. Data from these manual logs
+            can be used to establish a pattern about AQ in the area.
+            <br /> <br />- AQ Knowledge Database for users to learn more about
+            PM and AQI <br />
+            <br />- Interactions of the app can be viewed{' '}
+            <a href="https://www.figma.com/proto/onDa0SkRvfSmo6SJG7Uek5/SONYC_AQ?page-id=94%3A138&node-id=110%3A131&viewport=469%2C406%2C0.8509852290153503&scaling=min-zoom">
+              here
+            </a>{' '}
+            and accompanying wireframes can be viewed in the figures below:
           </p>
+          <div className="float-container-hci1">
+            <div className="float-child-ux">
+              <img src={hamburger} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 1. Hamburger wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={home} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 2. Home page wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={whatAQ} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 3. What is AQ page wireframe.</figlabel>
+            </div>
+          </div>
+
+          <div className="float-container-hci1">
+            <div className="float-child-ux">
+              <img src={log} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 4. Log wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={aqGood} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 5. AQ page wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={map} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 6. Map page wireframe.</figlabel>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div className="float-container-hci1">
+            <div className="float-child-ux">
+              <img src={logFull2} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 7. Log page wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={impAQ} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 8. Why AQ is important page wireframe.</figlabel>
+            </div>
+            <div className="float-child-ux">
+              <img src={moreAQ} alt="poster gif" className="ux-img" />
+              <br />
+              <figlabel>Figure 9. More info about AQ page wireframe.</figlabel>
+            </div>
+          </div>
+          <div className="clear"></div>
           <br />
         </div>
         <br /> <br />
-        <div className="block">
-          <h4 className="gif-text">
-            Undergraduate Summer Research Program Poster{' '}
-          </h4>
-          <p className="full-text"> </p>
-          <br />
-          <img src={poster} alt="poster gif" className="gif-img" />
-        </div>
-        <br /> <br />
-        <div className="block">
-          <h4 className="gif-text">Why Noise? </h4>
-          <p className="full-text">
-            Noise pollution is one of the topmost quality of life issues for
-            urban residents in the United States. It has been estimated that 9
-            out of 10 adults in New York City (NYC) are exposed to excessive
-            noise levels, i.e. beyond the limit of what the EPA considers to be
-            harmful. When applied to U.S. cities of more than 4 million
-            inhabitants, such estimates extend to over 72 million urban
-            residents. The objectives of SONYC are to create technological
-            solutions for: (1) the systematic, constant monitoring of noise
-            pollution at city scale; (2) the accurate description of acoustic
-            environments in terms of its composing sources; (3) broadening
-            citizen participation in noise reporting and mitigation; and (4)
-            enabling city agencies to take effective, information-driven action
-            for noise mitigation.
-          </p>
-          <br />
-        </div>
         <br /> <br />
         <br />
       </div>

@@ -26,17 +26,20 @@ function DataCollection() {
             which communiactes via UART with the SONYC project's Raspberry Pi 4B
             based noise sensor.
             <br /> <br />
-            <img
-              src={
-                'https://user-images.githubusercontent.com/86373439/128935455-52568d5b-1691-46e3-8aee-3af3ae30c94b.png'
-              }
-              alt="poster gif"
-              className="sensor-img"
-            />
+            <figure>
+              <img
+                src={
+                  'https://user-images.githubusercontent.com/86373439/128935455-52568d5b-1691-46e3-8aee-3af3ae30c94b.png'
+                }
+                alt="poster gif"
+                className="sensor-img"
+              />
+              <br />
+              <figlabel>Figure 1. Sensor IPS 7100.</figlabel>
+            </figure>
           </p>
-          <br />
         </div>
-        <br /> <br />
+        <br />
         <div className="block">
           <h4 className="gif-text">Introduction - Why is AQ part of SONYC?</h4>
           <p className="full-text">
@@ -47,9 +50,11 @@ function DataCollection() {
             3,000 people die each year due to PM2.5-related illnesses in the
             city, and approximately 8,000 more hospital visits can be linked to
             dangerous PM2.5 exposure.
+            <br />
+            <br />
             <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/eode/eode-air-quality-impact.pdf">
               Maps
-            </a>
+            </a>{' '}
             from a study by the Department of Health show that the distribution
             of PM2.5-related medical incidents is not even across neighborhoods,
             and is elevated with higher poverty rates. This shows that
@@ -58,27 +63,43 @@ function DataCollection() {
             aforementioned{' '}
             <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/eode/eode-air-quality-impact.pdf">
               Department of Health
-            </a>
+            </a>{' '}
             illustrate the danger of NYC PM2.5 concentrations and showcase the
             exacerbated risk to communities with high poverty rates. Further
             figures are available at the source.
             <br />
             <br />
-            <img
-              src={
-                'https://user-images.githubusercontent.com/86373439/128933800-203ed878-9706-475b-8545-4675aa4cc693.png'
-              }
-              alt="poster gif"
-              className="sensor-img"
-            />
-            <img
-              src={
-                'https://user-images.githubusercontent.com/86373439/128934092-9049ec9c-7452-40d1-ad3f-a3150b4776e7.png'
-              }
-              alt="poster gif"
-              className="sensor-img"
-            />
-            Images courtesy of the NYC Department of Health and Mental Hygiene.
+            <figure>
+              <img
+                src={
+                  'https://user-images.githubusercontent.com/86373439/128933800-203ed878-9706-475b-8545-4675aa4cc693.png'
+                }
+                alt="poster gif"
+                className="gif-img"
+              />
+              <br />
+              <figlabel>
+                Figure 2 (above). Health effects from current PM2.5. Image
+                courtesy of the NYC Department of Health and Mental Hygiene.
+              </figlabel>
+            </figure>
+            <br />
+            <br />
+            <figure>
+              <img
+                src={
+                  'https://user-images.githubusercontent.com/86373439/128934092-9049ec9c-7452-40d1-ad3f-a3150b4776e7.png'
+                }
+                alt="poster gif"
+                className="gif-img"
+              />
+              <br />
+              <figlabel>
+                Figure 3 (above). Visualization of PM2.5 attributable
+                respiratory hospitalization rate. Image courtesy of the NYC
+                Department of Health and Mental Hygiene.
+              </figlabel>
+            </figure>
             <br />
             <br />
             SONYC has spent years working with citizen-science based approaches
@@ -112,7 +133,7 @@ function DataCollection() {
           </p>
           <br />
         </div>
-        <br /> <br />
+        <br />
         <div className="block">
           <h4 className="gif-text">Data Formatting Information </h4>
           <h5 className="gif-text-h5">Output String Information </h5>

@@ -53,9 +53,11 @@ function AboutUgsrp() {
           </p>
           <br />
           <figure>
-            <img src={poster} alt="poster gif" className="gif-img" />
+            <img src={poster} alt="poster gif" className="gif-img-poster" />
+            <br />
             <figlabel>
-              SONYC project poster at Undergraduate Summer Research Program 2021
+              Figure 1. SONYC project poster at Undergraduate Summer Research
+              Program 2021
             </figlabel>
           </figure>
         </div>
@@ -97,8 +99,9 @@ function AboutUgsrp() {
             medical issues.
             <figure>
               <img src={airq} alt="air1" className="gif-img-sm" />
+              <br />
               <figlabel>
-                Size comparison for PM particles. Source:{' '}
+                Figure 2. Size comparison for PM particles. Source:{' '}
                 <a href="https://www.sciencelearn.org.nz/images/1869-size-comparisons-for-pm-particles">
                   Sciencelearn.org
                 </a>

@@ -63,7 +63,6 @@ function DataVisualization() {
         </div>
         <div className="block">
           <h4 className="gif-text">Data Visualization Research Review</h4>
-
           <div>
             <p className="full-text">
               <b>

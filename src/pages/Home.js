@@ -17,13 +17,15 @@ function Home() {
             The Sounds of the New York City (SONYC) project launched by
             researchers from NYU and Ohio State University is a
             first-of-its-kind comprehensive research initiative to understand
-            and address noise pollution in New York and beyond. The SONYC
-            project involves large-scale noise monitoring – leverages the latest
-            in machine learning technology, big data analysis, and citizen
-            science reporting to more effectively monitor, analyze, and mitigate
-            urban noise pollution. This multi-year project has received a $4.6
-            million grant from the NSF and has the support of City health and
-            environmental agencies. Learn about the project{' '}
+            and address noise pollution in New York and beyond.
+            <br />
+            <br />
+            The SONYC project involves large-scale noise monitoring – leverages
+            the latest in machine learning technology, big data analysis, and
+            citizen science reporting to more effectively monitor, analyze, and
+            mitigate urban noise pollution. This multi-year project has received
+            a $4.6 million grant from the NSF and has the support of City health
+            and environmental agencies. Learn about the project{' '}
             <a className="home-link" href="https://wp.nyu.edu/sonyc">
               here
             </a>
