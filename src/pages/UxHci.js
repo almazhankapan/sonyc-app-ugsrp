@@ -58,6 +58,8 @@ function UxHci() {
             </div>
             <div className="clear"></div>
             <br />
+            <br />
+            <br />
             <b>
               The mobile app interface includes the following features:
             </b>{' '}
@@ -83,36 +85,39 @@ function UxHci() {
           <div className="float-container-hci1">
             <div className="float-child-ux">
               <img src={hamburger} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 1. Hamburger wireframe.</figlabel>
+
+              <div className="label-hci">
+                Figure 1. Hamburger menu wireframe.
+              </div>
             </div>
             <div className="float-child-ux">
               <img src={home} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 2. Home page wireframe.</figlabel>
+
+              <div className="label-hci">Figure 2. Home page wireframe.</div>
             </div>
             <div className="float-child-ux">
               <img src={whatAQ} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 3. What is AQ page wireframe.</figlabel>
+
+              <div className="label-hci">
+                Figure 3. 'Introduction to AQ' page wireframe.
+              </div>
             </div>
           </div>
 
           <div className="float-container-hci1">
             <div className="float-child-ux">
               <img src={log} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 4. Log wireframe.</figlabel>
+
+              <div className="label-hci">Figure 4. Log AQ wireframe.</div>
             </div>
             <div className="float-child-ux">
               <img src={aqGood} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 5. AQ page wireframe.</figlabel>
+
+              <div className="label-hci">Figure 5. AQ Monitor wireframe.</div>
             </div>
             <div className="float-child-ux">
               <img src={map} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 6. Map page wireframe.</figlabel>
+              <div className="label-hci">Figure 6. Map page wireframe.</div>
             </div>
           </div>
           <br />
@@ -121,21 +126,27 @@ function UxHci() {
           <div className="float-container-hci1">
             <div className="float-child-ux">
               <img src={logFull2} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 7. Log page wireframe.</figlabel>
+
+              <div className="label-hci">
+                Figure 7. Journal logs page wireframe.
+              </div>
             </div>
             <div className="float-child-ux">
               <img src={impAQ} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 8. Why AQ is important page wireframe.</figlabel>
+              <div className="label-hci">
+                Figure 8. 'Importance of AQ' page wireframe.
+              </div>
             </div>
             <div className="float-child-ux">
               <img src={moreAQ} alt="poster gif" className="ux-img" />
-              <br />
-              <figlabel>Figure 9. More info about AQ page wireframe.</figlabel>
+              <div className="label-hci">
+                Figure 9. 'More info about AQ' page wireframe.
+              </div>
             </div>
           </div>
+
           <div className="clear"></div>
+          <br />
           <br />
         </div>
         <br /> <br />
