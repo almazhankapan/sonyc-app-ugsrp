@@ -79,7 +79,7 @@ function MeetTheTeam() {
             interface to visualize the AQ and noise level data. You can learn
             more about data visualization research <a href="/datavis">here</a>{' '}
             and view project code{' '}
-            <a href="https://github.com/almazhankapan/sonyc-app">here</a>.
+            <a href="https://github.com/almazhankapan/sonyc-app-ugsrp">here</a>.
           </p>
         </div>
         <div className="content">
