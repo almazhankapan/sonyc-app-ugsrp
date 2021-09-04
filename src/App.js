@@ -46,8 +46,6 @@ const App = () => {
         <Router>
           <ScrollToTop />
           <Switch>
-            {/* TODO: Add a way to view a list of all shows, much like my-shows but for non logged in users */}
-
             <Route path="/data-collection">
               <DataCollection />
             </Route>
