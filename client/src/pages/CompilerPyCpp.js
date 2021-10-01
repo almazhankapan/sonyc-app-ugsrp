@@ -19,8 +19,8 @@ function CompilerPyCpp() {
     }
     try {
       const { data } = await axios.post(
-        'https://air-editor.herokuapp.com/run',
-        //'http://localhost:13000/run',
+        //'https://air-editor.herokuapp.com/run',
+        'http://localhost:13000/run',
         payload,
       )
       setOutput(data.output)
